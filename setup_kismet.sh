@@ -1,5 +1,8 @@
 #!/bin/sh
 
+#Update system repos and upgrade to latest
+sudo apt-get update && sudo apt-get -y dist-upgrade && sudo apt-get autoclean && sudo apt-get autoremove
+
 #Get dependancies for Kismet
 sudo apt-get install build-essential libmicrohttpd-dev git libnl-3-dev libnl-genl-3-dev libcap-dev libpcap-dev libncurses5-dev libnm-dev libdw-dev libsqlite3-dev libncurses5-dev libnm-dev libdw-dev libsqlite3-dev libbluetooth-dev
 
