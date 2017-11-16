@@ -16,7 +16,7 @@ sudo mv /etc/dnsmasq.conf /etc/dnsmasq.conf.bak
 sudo cat dnsmasq.conf > /etc/dnsmasq.conf
 sudo cp hostapd.conf /etc/hostapd/hostapd.conf
 
-sudo echo DAEMON_CONF="/etc/hostapd/hostapd.conf >> /etc/default/hostapd
+sudo echo DAEMON_CONF="/etc/hostapd/hostapd.conf" >> /etc/default/hostapd
 
-sudo service hostapd start  
-sudo service dnsmasq start  
+sudo service hostapd start
+sudo service dnsmasq start
