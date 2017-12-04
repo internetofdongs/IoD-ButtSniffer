@@ -2,7 +2,7 @@
 
 #install AP mode utilities
 sudo apt-get update
-sudo apt-get install dnsmasq hostapd ntp
+sudo apt-get -y install dnsmasq hostapd ntp i2c-tools screen
 
 #Deny dhcp client on our static wireless interface
 sudo echo denyinterfaces wlan0 >> /etc/dhcpcd.conf
@@ -17,7 +17,7 @@ sudo ifup wlan0
 
 #Backup original config files and copy our new ones in their place
 sudo mv /etc/dnsmasq.conf /etc/dnsmasq.conf.bak
-sudo cat dnsmasq.conf > /etc/dnsmasq.conf
+sudo cp dnsmasq.conf /etc/dnsmasq.conf
 sudo mv /etc/hostapd/hostapd.conf /etc/hostapd/hostapd.conf.bak
 sudo cp hostapd.conf /etc/hostapd/hostapd.conf
 
@@ -27,4 +27,8 @@ sudo echo DAEMON_CONF="/etc/hostapd/hostapd.conf" >> /etc/default/hostapd
 #Restart hostapd and dnsmasq
 sudo service hostapd start
 sudo service dnsmasq start
+
+#Install hw clock and Kismet startup script
+
+sudo cp rc.local /etc/rc.local
 
