@@ -1,15 +1,20 @@
 #!/bin/bash
 ########################################################################
 #
-# Written by Mike Kelly
+# Originally Written by Mike Kelly
 # twitter.com/lixmk
 # git.io/lixmk
 # exfil.co
 # 2016
 #
+# Forked by RenderMan
+# twitter.com/internetofdongs
+# internetofdon.gs
+# 2017
+
 ########################################################################
 ####################                                ####################
-####################     Wiegotcha fixclock.sh      ####################
+####################     ButtSniffer fixclock.sh    ####################
 ####################                                ####################
 ########################################################################
 #
@@ -33,7 +38,7 @@
 echo -e "\e[0;31m#############################################################\e[0m"
 echo -e "\e[0;31m#\e[0m                                                           \e[0;31m#\e[0m"
 echo -e "\e[0;31m#\e[0m      This script will fix the hardware clock and set      \e[0;31m#\e[0m"
-echo -e "\e[0;31m#\e[0m          the correct time and date for Wiegotcha          \e[0;31m#\e[0m"
+echo -e "\e[0;31m#\e[0m        the correct time and date for the ButtSniffer      \e[0;31m#\e[0m"
 echo -e "\e[0;31m#\e[0m                                                           \e[0;31m#\e[0m"
 echo -e "\e[0;31m#\e[0m Ensure ethernet is connected then press ENTER to continue \e[0;31m#\e[0m"
 echo -e "\e[0;31m#\e[0m                                                           \e[0;31m#\e[0m"
