@@ -8,11 +8,10 @@ sudo apt-get install build-essential libmicrohttpd-dev git libnl-3-dev libnl-gen
 
 #Clone the Kismet Git repo, configure and build, installing as suid root
 git clone https://github.com/kismetwireless/kismet.git
-cd kismet
-./configure
+
 echo "If you are building this on a Raspberry Pi, go get a coffee, it'll take a while"
-make
-sudo make suidinstall
+
+cd kismet && ./configure && make && sudo make suidinstall
 
 #Add current user to kismet group to run as suidroot
 sudo usermod -a -G kismet $USER
@@ -22,8 +21,8 @@ cd ~/
 git clone https://github.com/internetofdongs/IoD-Screwdriver
 cd IoD-Screwdriver/plugin-iod-screwdriver
 sudo make install
+
+#Create ButtSniffer data directory
 cd ~/
 mkdir ~/ButtSniff_Data
-
-
 
