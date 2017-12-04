@@ -16,6 +16,11 @@ cd kismet && ./configure && make && sudo make suidinstall
 #Add current user to kismet group to run as suidroot
 sudo usermod -a -G kismet $USER
 
+#Copy Kismet configs
+cd ..
+cp kismet_httpd.conf kismet_site.conf kismet_logging.conf kismet_storage.conf ~/.kismet
+
+
 #Create ButtSniffer data directory
 cd ~/
 mkdir ~/ButtSniff_Data
