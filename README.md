@@ -3,33 +3,33 @@ IoD Bluetooth Sniffer rPi solution
 
 ## Hardware: 
 
-Raspberry Pi 3 model B - (https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
-DS3231 Real Time Clock - (https://www.amazon.ca/Source-Hardware-Raspberry-Foreign-Precision/dp/B077LPJHXK/ref=sr_1_2)
-Asus BT400 USB Bluetooth 4.0 adapter (https://www.amazon.ca/ASUS-USB-Adapter-Bluetooth-USB-BT400/dp/B00DJ83070/ref=sr_1_1)
->=8gb MicroSD card for Pi
+Raspberry Pi 3 model B - (https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)  
+DS3231 Real Time Clock - (https://www.amazon.ca/Source-Hardware-Raspberry-Foreign-Precision/dp/B077LPJHXK/ref=sr_1_2)  
+Asus BT400 USB Bluetooth 4.0 adapter (https://www.amazon.ca/ASUS-USB-Adapter-Bluetooth-USB-BT400/dp/B00DJ83070/ref=sr_1_1)  
+8gb or larger MicroSD card for rPi  
 
 ## Software: 
 
-OS: Raspian Stretch Lite (Built and tested on release 2017-11-29) (https://www.raspberrypi.org/downloads/raspbian/)
-Scanner: Kismet Wireless Scanner (https://kismetwireless.net/)
-Kismet Plugin: IoD-Screwdriver IoD device highlighting plugin (https://github.com/internetofdongs/IoD-Screwdriver.git)
-Kismet Plugin: Kismet Mobile Dashboard (https://github.com/elkentaro/KismetMobileDashboard)
-BT Firmware: WinterHeart Broadcom Firmware repository (https://github.com/winterheart/broadcom-bt-firmware)
+OS: Raspian Stretch Lite (Built and tested on release 2017-11-29) (https://www.raspberrypi.org/downloads/raspbian/)  
+Scanner: Kismet Wireless Scanner (https://kismetwireless.net/)  
+Kismet Plugin: IoD-Screwdriver IoD device highlighting plugin (https://github.com/internetofdongs/IoD-Screwdriver.git)  
+Kismet Plugin: Kismet Mobile Dashboard (https://github.com/elkentaro/KismetMobileDashboard)  
+BT Firmware: WinterHeart Broadcom Firmware repository (https://github.com/winterheart/broadcom-bt-firmware)  
 
 ### This uses the new Kismet Development branch which is changing daily and a moving target.  Things may break from time to time.
 
 
 ## Assumptions:
 
-rPi3 onboard Bluetooth and two BT400's all used for scanning
-rPi3 onboard Wi-Fi used as access point for service data
-rPi3 onboard Ethernet is set to DHCP for LAN access and data access
-DS3231 RTC module for maintaining the clock sync for accurate logs
-Mobile device (phone/tablet) used for accessing web interface to monitor data collection
-System can be run easily off of USB 5v battery packs with 2.1 AMP capability. Runtime determined by capacity of battery pack
-Unit can used for static installation as well over LAN connection as well
-Usernames and Passwords assumed to be default but any sudo capable user should work
-Installation assumes Internet access via LAN Ethernet connection
+- rPi3 onboard Bluetooth and two BT400's all used for scanning  
+- rPi3 onboard Wi-Fi used as access point for service data  
+- rPi3 onboard Ethernet is set to DHCP for LAN access and data access  
+- DS3231 RTC module for maintaining the clock sync for accurate logs  
+- Mobile device (phone/tablet) used for accessing web interface to monitor data collection  
+- System can be run easily off of USB 5v battery packs with 2.1 AMP capability. Runtime determined by capacity of battery pack  
+- Unit can used for static installation as well over LAN connection as well  
+- Usernames and Passwords assumed to be default but any sudo capable user should work  
+- Installation assumes Internet access via LAN Ethernet connection  
 
 ## Install Instructions:
 
@@ -68,4 +68,5 @@ dhcpcd.conf file
 
 ## TO DO
 
-Menus and install questions to allow various configuration options
+Menus and install questions to allow various configuration options  
+Tons of tweaks to the Kismet config
