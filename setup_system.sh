@@ -4,6 +4,10 @@
 sudo apt-get update
 sudo apt-get -y install dnsmasq hostapd ntp i2c-tools screen
 
+#Enable SSH and I2C interfaces
+sudo raspi-config nonint do_i2c 0
+sudo raspi-config nonint do_ssh 0
+
 #Deny dhcp client on our static wireless interface
 sudo echo denyinterfaces wlan0 >> /etc/dhcpcd.conf
 

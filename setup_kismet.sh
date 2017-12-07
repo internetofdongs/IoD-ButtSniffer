@@ -25,9 +25,13 @@ cp kismet_httpd.conf kismet_site.conf kismet_logging.conf kismet_storage.conf ~/
 cd ~/
 mkdir ~/ButtSniff_Data
 
-
 #Install IoD-Screwdriver plugin
 cd ~/
 git clone https://github.com/internetofdongs/IoD-Screwdriver
 cd IoD-Screwdriver/plugin-iod-screwdriver
 sudo make install
+
+#Install Kismet Mobile Dashboard
+cd ~/kismet
+git clone https://github.com/elkentaro/KismetMobileDashboard.git
+cd ~/kismet/KismetMobileDashboard && sudo make install

@@ -1,0 +1,6 @@
+dmesg | grep -i "Direct firmware load for " | cut -d ' ' -f 12 > /tmp/fw_name
+
+cp ~/broadcom-bt-firmware/"cat /tmp/fw_name" /lib/firmware/brcm  --Still working on syntax
+
+
+
