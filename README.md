@@ -3,18 +3,18 @@ IoD Bluetooth Sniffer rPi solution
 
 ## Hardware: 
 
-Raspberry Pi 3 model B - (https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)  
-DS3231 Real Time Clock - (https://www.amazon.ca/Source-Hardware-Raspberry-Foreign-Precision/dp/B077LPJHXK/ref=sr_1_2)  
-Asus BT400 USB Bluetooth 4.0 adapter (https://www.amazon.ca/ASUS-USB-Adapter-Bluetooth-USB-BT400/dp/B00DJ83070/ref=sr_1_1)  
+Raspberry Pi 3 model B - [LINK](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)  
+DS3231 Real Time Clock - [LINK](https://www.amazon.ca/Source-Hardware-Raspberry-Foreign-Precision/dp/B077LPJHXK/ref=sr_1_2)  
+Asus BT400 USB Bluetooth 4.0 adapter [LINK](https://www.amazon.ca/ASUS-USB-Adapter-Bluetooth-USB-BT400/dp/B00DJ83070/ref=sr_1_1)  
 8gb or larger MicroSD card for rPi  
 
 ## Software: 
 
-OS: Raspian Stretch Lite (Built and tested on release 2017-11-29) (https://www.raspberrypi.org/downloads/raspbian/)  
-Scanner: Kismet Wireless Scanner (https://kismetwireless.net/)  
-Kismet Plugin: IoD-Screwdriver IoD device highlighting plugin (https://github.com/internetofdongs/IoD-Screwdriver.git)  
-Kismet Plugin: Kismet Mobile Dashboard (https://github.com/elkentaro/KismetMobileDashboard)  
-BT Firmware: WinterHeart Broadcom Firmware repository (https://github.com/winterheart/broadcom-bt-firmware)  
+- OS: Raspian Stretch Lite (Built and tested on release 2017-11-29) [Download link](https://www.raspberrypi.org/downloads/raspbian/)  
+- Scanner: Kismet Wireless Scanner [Download link](https://kismetwireless.net/)  
+- Kismet Plugin: IoD-Screwdriver IoD device highlighting plugin [Download link](https://github.com/internetofdongs/IoD-Screwdriver.git)  
+- Kismet Plugin: Kismet Mobile Dashboard [Download link](https://github.com/elkentaro/KismetMobileDashboard)  
+- BT Firmware: WinterHeart Broadcom Firmware repository [Download link](https://github.com/winterheart/broadcom-bt-firmware)  
 
 ### This uses the new Kismet Development branch which is changing daily and a moving target.  Things may break from time to time.
 
