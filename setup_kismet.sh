@@ -33,5 +33,5 @@ sudo make install
 
 #Install Kismet Mobile Dashboard
 
-git clone https://github.com/elkentaro/KismetMobileDashboard.git ~/IoD-ButtSniffer/kismet/KismetMobileDashboard
-cd ~/IoD-ButtSniffer/kismet/KismetMobileDashboard && sudo make install
+git clone https://github.com/elkentaro/KismetMobileDashboard.git ~/kismet/KismetMobileDashboard
+cd ~/kismet/KismetMobileDashboard && sudo make install
