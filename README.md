@@ -10,26 +10,26 @@ Asus BT400 USB Bluetooth 4.0 adapter [LINK](https://www.amazon.ca/ASUS-USB-Adapt
 
 ## Software: 
 
-- OS: Raspian Stretch Lite (Built and tested on release 2017-11-29) [Download link](https://www.raspberrypi.org/downloads/raspbian/)  
+- OS: Raspian Stretch Lite (Built and tested on release 2018-3-13) [Download link](https://www.raspberrypi.org/downloads/raspbian/)  
 - Scanner: Kismet Wireless Scanner [Download link](https://kismetwireless.net/)  
 - Kismet Plugin: IoD-Screwdriver IoD device highlighting plugin [Download link](https://github.com/internetofdongs/IoD-Screwdriver.git)  
 - Kismet Plugin: Kismet Mobile Dashboard [Download link](https://github.com/elkentaro/KismetMobileDashboard)  
 - BT Firmware: WinterHeart Broadcom Firmware repository [Download link](https://github.com/winterheart/broadcom-bt-firmware)  
 
-### This uses the new Kismet Development branch which is changing daily and a moving target.  Things may break from time to time.
+### This uses the new Kismet Development branch which is changing daily and a moving target.  Things may break from time to time. Use at your own risk
 
 
 ## Assumptions:
 
 - rPi3 onboard Bluetooth and two BT400's all used for scanning  
-- rPi3 onboard Wi-Fi used as access point for service data  
-- rPi3 onboard Ethernet is set to DHCP for LAN access and data access  
-- DS3231 RTC module for maintaining the clock sync for accurate logs  
-- Mobile device (phone/tablet) used for accessing web interface to monitor data collection  
+- rPi3 onboard Wi-Fi used as access point for serving Kismet console data to mobile device
+- rPi3 onboard Ethernet is set to DHCP for LAN access and SSH data access
+- DS3231 RTC module for maintaining the clock sync for accurate logs (optional but useful for accurate log timestamps)  
+- Mobile device (phone/tablet) used for accessing web interface to monitor data collection (if you want to do realtime monitoring. Can also access the Kismet console over ethernet)
 - System can be run easily off of USB 5v battery packs with 2.1 AMP capability. Runtime determined by capacity of battery pack  
 - Unit can used for static installation as well over LAN connection as well  
-- Usernames and Passwords assumed to be default but any sudo capable user should work  
-- Installation assumes Internet access via LAN Ethernet connection  
+- Usernames and Passwords assumed to be default on the rPi, but any sudo capable user should work  
+- Installation assumes Internet access via LAN Ethernet connection for github downloads, etc.
 
 ## Install Instructions:
 
@@ -39,7 +39,7 @@ Asus BT400 USB Bluetooth 4.0 adapter [LINK](https://www.amazon.ca/ASUS-USB-Adapt
 
 - Grab the IoD-ButtSniffer scripts (git clone https://github.com/internetofdongs/IoD-ButtSniffer)
 
-- Change into the IoD-ButtSniffer directory (cd IoD-ButtSniffer) and run the scripts:
+- Change into the IoD-ButtSniffer directory (cd IoD-ButtSniffer) and run the scripts (no sudo needed, the script calls sudo when needed):
 
 There are 3 main scripts to run and should be run in this order:
 
@@ -62,11 +62,10 @@ BCM20702A1-0b05-17cb.hcd) from the ~/broadcom-bt-firmware/brcm/ directory to /li
 
 ## Errata
 
-On boot, dnsmasq/dhcpd will show an error, just ignore it. I still need to figure this out. Its an issue with the interfaces file and 
-dhcpcd.conf file
+On boot, dnsmasq/dhcpd will show an error, just ignore it. I still need to figure this out. Its an issue with the interfaces file and dhcpcd.conf file.  Anyone want to fix this for me?
 
 
 ## TO DO
 
 Menus and install questions to allow various configuration options  
-Tons of tweaks to the Kismet config
+Tons of tweaks to the Kismet config (updated for Raspian 2018-3-13 and Kismet Dev as of March 30th, 2018)
