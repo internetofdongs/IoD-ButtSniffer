@@ -26,7 +26,7 @@ sudo mv /etc/hostapd/hostapd.conf /etc/hostapd/hostapd.conf.bak
 sudo cp hostapd.conf /etc/hostapd/hostapd.conf
 
 #Specify which config file to use for hostapd which sets the daemon to start at boot
-sudo echo DAEMON_CONF="/etc/hostapd/hostapd.conf" >> /etc/default/hostapd
+sudo sh -c "echo 'DAEMON_CONF="/etc/hostapd/hostapd.conf"' >> /etc/default/hostapd"
 
 #Restart hostapd and dnsmasq
 sudo service hostapd start
