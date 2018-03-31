@@ -60,10 +60,15 @@ Bluetooth: hci1: BCM: Patch brcm/BCM20702A1-0b05-17cb.hcd not found"
 Run this script to download the various firmwares for broadcom based adapters and copy the .hcd file that it is looking for (i.e. 
 BCM20702A1-0b05-17cb.hcd) from the ~/broadcom-bt-firmware/brcm/ directory to /lib/firmware/brcm/, then reboot or reinsert the adapter"
 
+## Custom Config Options
+
+This installation script uses the kismet_site.conf override file in /usr/local/etc/ to set a few options.  If you want to change anything in your kismet install, you should add the config lines to this file vs changing them in kismet.conf or anywhere else since kismet_site.conf may override those changes.  You can read more in the Kismet README: [Link to Kismet README](https://github.com/kismetwireless/kismet/blob/master/README)
+
 ## Errata
 
 On boot, dnsmasq/dhcpd will show an error, just ignore it. I still need to figure this out. Its an issue with the interfaces file and dhcpcd.conf file.  Anyone want to fix this for me?
 
+kismet server UI uses kismet/kismet 
 
 ## TO DO
 
