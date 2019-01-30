@@ -11,13 +11,16 @@ sudo raspi-config nonint do_ssh 0
 #Deny dhcp client on our static wireless interface
 sudo echo denyinterfaces wlan0 >> /etc/dhcpcd.conf
 
+sudo echo interface wlan0 >> /etc/dhcpcd.conf
+sudo echo static ip_address=192.168.88.1/24 >> /etc/dhcpcd.conf
+
 #Copy our static configuration to the systems interfaces file
-sudo cp interfaces /etc/network/interfaces
+#sudo cp interfaces /etc/network/interfaces
 
 #Cycle the dhcp client to use the new config and bounce the wireless interface
 sudo service dhcpcd restart
-sudo ifdown wlan0
-sudo ifup wlan0
+#sudo ifdown wlan0
+#sudo ifup wlan0
 
 #Backup original config files and copy our new ones in their place
 sudo mv /etc/dnsmasq.conf /etc/dnsmasq.conf.bak

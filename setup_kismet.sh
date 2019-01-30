@@ -27,8 +27,8 @@ cd ~/
 mkdir ~/ButtSniff_Data
 
 #Copy Kismet configs
-cd ~/IoD-ButtSniffer
-cp kismet_httpd.conf kismet_site.conf kismet_logging.conf kismet_storage.conf ~/.kismet
+#cd ~/IoD-ButtSniffer
+#cp kismet_httpd.conf kismet_site.conf kismet_logging.conf kismet_storage.conf ~/.kismet
 
 
 #Install IoD-Screwdriver plugin
@@ -39,5 +39,6 @@ sudo make install
 
 #Install Kismet Mobile Dashboard
 
-git clone https://github.com/elkentaro/KismetMobileDashboard.git ~/kismet/KismetMobileDashboard
-cd ~/kismet/KismetMobileDashboard && sudo make install
+#WIP
+#git clone https://github.com/elkentaro/KismetMobileDashboard.git ~/kismet/KismetMobileDashboard
+#cd ~/kismet/KismetMobileDashboard && sudo make install
