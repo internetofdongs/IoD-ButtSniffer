@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #Update system repos and upgrade to latest
-sudo apt-get update && sudo apt-get -y dist-upgrade && sudo apt-get autoclean && sudo apt-get autoremove
+sudo apt -y update && sudo apt -y dist-upgrade && sudo apt -y autoclean && sudo apt -y autoremove
 
 #Get dependancies for Kismet
 #sudo apt-get -y install build-essential libmicrohttpd-dev git libnl-3-dev libnl-genl-3-dev libcap-dev libpcap-dev libncurses5-dev libnm-dev libdw-dev libsqlite3-dev libncurses5-dev libnm-dev libdw-dev libsqlite3-dev libbluetooth-dev
@@ -18,12 +18,11 @@ sudo apt-get update && sudo apt-get -y dist-upgrade && sudo apt-get autoclean &&
 #sudo usermod -a -G kismet $USER
 
 wget -O - https://www.kismetwireless.net/repos/kismet-release.gpg.key | sudo apt-key add -
-echo 'deb https://www.kismetwireless.net/repos/apt/release/stretch stretch main' | sudo tee /etc/apt/sources.list.d/kismet.list
+echo 'deb https://www.kismetwireless.net/repos/apt/release/buster buster main' | sudo tee /etc/apt/sources.list.d/kismet.list
 sudo apt update
-sudo apt install kismet2018
+sudo apt -y install kismet
 
 #Create ButtSniffer data directory
-cd ~/
 mkdir ~/ButtSniff_Data
 
 #Copy Kismet configs

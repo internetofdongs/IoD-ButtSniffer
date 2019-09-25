@@ -1,8 +1,8 @@
 #!/bin/sh
 
 #install AP mode utilities
-sudo apt-get update
-sudo apt-get -y install dnsmasq hostapd ntp i2c-tools screen
+sudo apt update
+sudo apt -y install dnsmasq hostapd ntp i2c-tools screen
 
 #Enable SSH and I2C interfaces
 sudo raspi-config nonint do_i2c 0
@@ -32,8 +32,12 @@ sudo cp hostapd.conf /etc/hostapd/hostapd.conf
 sudo sh -c "echo 'DAEMON_CONF="/etc/hostapd/hostapd.conf"' >> /etc/default/hostapd"
 
 #Restart hostapd and dnsmasq
-sudo service hostapd start
-sudo service dnsmasq start
+sudo systemctl unmask hostapd
+sudo systemctl enable hostapd
+sudo systemctl start hostapd
+sudo systemctl unmask dnsmasq
+sudo systemctl enable dnsmasq
+sudo systemctl start dnsmasq
 
 #Install hw clock and Kismet startup script
 

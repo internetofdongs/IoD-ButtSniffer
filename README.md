@@ -10,7 +10,7 @@ Asus BT400 USB Bluetooth 4.0 adapter [LINK](https://www.amazon.ca/ASUS-USB-Adapt
 
 ## Software: 
 
-- OS: Raspian Stretch Lite (Built and tested on release 2018-3-13) [Download link](https://www.raspberrypi.org/downloads/raspbian/)  
+- OS: Raspian Buster Lite (Built and tested on release 2019-07-10) [Download link](https://www.raspberrypi.org/downloads/raspbian/)
 - Scanner: Kismet Wireless Scanner [Download link](https://kismetwireless.net/)  
 - Kismet Plugin: IoD-Screwdriver IoD device highlighting plugin [Download link](https://github.com/internetofdongs/IoD-Screwdriver.git)  
 - Kismet Plugin: Kismet Mobile Dashboard [Download link](https://github.com/elkentaro/KismetMobileDashboard)  
@@ -60,17 +60,14 @@ Bluetooth: hci1: BCM: Patch brcm/BCM20702A1-0b05-17cb.hcd not found"
 Run this script to download the various firmwares for broadcom based adapters and copy the .hcd file that it is looking for (i.e. 
 BCM20702A1-0b05-17cb.hcd) from the ~/broadcom-bt-firmware/brcm/ directory to /lib/firmware/brcm/, then reboot or reinsert the adapter"
 
-## Custom Config Options
-
-This installation script uses the kismet_site.conf override file in /usr/local/etc/ to set a few options.  If you want to change anything in your kismet install, you should add the config lines to this file vs changing them in kismet.conf or anywhere else since kismet_site.conf may override those changes.  You can read more in the Kismet README: [Link to Kismet README](https://github.com/kismetwireless/kismet/blob/master/README)
-
 ## Errata
 
-On boot, dnsmasq/dhcpd will show an error, just ignore it. I still need to figure this out. Its an issue with the interfaces file and dhcpcd.conf file.  Anyone want to fix this for me?
+On first run, you'll have to setup a username and password in Kismet.  Connect to the Wifi SSID "ButtSniffer" with a mobile device or laptop 
+and connect to Kismet at http://192.168.88.1:2501.  Next time you connect, you'll have to enter this username and password again.
 
-kismet server UI uses kismet/kismet 
+Currently not automatically installing the mobile dashboard since there is no simple way to build it if you use the Kismet packages. May need to figure out a build package system of some sort.
 
 ## TO DO
 
 Menus and install questions to allow various configuration options  
-Tons of tweaks to the Kismet config (updated for Raspian 2018-3-13 and Kismet Dev as of March 30th, 2018)
+Tons of tweaks to the Kismet config (updated for Raspian 2019-07-10 and Kismet Packages as of September 24th, 2019)
